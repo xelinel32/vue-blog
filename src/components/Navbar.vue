@@ -1,6 +1,8 @@
 <template>
-  <b-navbar toggleable="sm" type="dark" variant="dark">
-    <b-navbar-brand tag="h1" class="font-weight-bold mb-0">Blog</b-navbar-brand>
+  <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar-brand>
+      VueBlog 🖖
+    </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
@@ -8,6 +10,7 @@
           v-for="link in navLinks"
           :key="link.name"
           :to="link.path"
+          class="font-weight-bold ma-0"
           exact
           >{{ link.name }}</b-nav-item
         >
@@ -47,11 +50,7 @@ export default {
       },
       {
         path: '/category',
-        name: 'Category',
-      },
-      {
-        path: '/article',
-        name: 'Article',
+        name: 'Categories',
       },
     ],
   }),

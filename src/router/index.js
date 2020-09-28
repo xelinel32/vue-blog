@@ -39,6 +39,30 @@ const routes = [
       title: 'Index | Blog ',
     },
   },
+  {
+    path: '/category',
+    name: 'category',
+    components: {
+      navbar: () => import('@/components/Navbar'),
+      default: () => import('@/views/Category'),
+    },
+    meta: {
+      isAuthNeed: true,
+      title: 'Category | Blog ',
+    },
+  },
+  {
+    path: '/article/:id',
+    name: 'article',
+    components: {
+      navbar: () => import('@/components/Navbar'),
+      default: () => import('@/views/Article'),
+    },
+    meta: {
+      isAuthNeed: true,
+      title: 'Article | Blog ',
+    },
+  },
 ]
 
 const router = new VueRouter({

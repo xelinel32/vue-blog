@@ -16,11 +16,11 @@ module.exports = {
   configureWebpack: {
     devtool: 'source-map',
   }, // for webpack config
-  // css: {
-  //   loaderOptions: {
-  //     scss: {
-  //       prependData: "@import '@/styles/_vars.scss';",
-  //     },
-  //   },
-  // },
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: "@import '@/styles/style.scss';",
+      },
+    },
+  },
 }
